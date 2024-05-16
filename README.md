@@ -6,9 +6,9 @@
 ### 上課用網址
 https://meet.google.com/wdk-fzdc-swx
 
-    這是什麼
-    -- 這是第1排 
-    -- 這是第2排 
+這是什麼
+- 這是第1排 
+- 這是第2排 
 
 1. 這是python1
 2. 這是python2
