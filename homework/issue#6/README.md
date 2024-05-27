@@ -6,10 +6,8 @@
 
 - 方法：使用內建的model requests, 設定為json檔
 
-with open("aqi.json","wb") as fd:
-
+ with open("aqi.json","wb") as fd:
     for chunk in response.iter_content(chunk_size=128):
-
        fd.write(chunk)
 
 ### [python code連結](./hwcode.py)
