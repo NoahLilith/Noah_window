@@ -1,9 +1,9 @@
 import tkinter as tk
 
 def get_names() -> list[str]:
-    #with open('names.txt',encoding='utf-8') as file:
-    #    content:str = file.read()
-    #names:list[str] = content.split()
+    with open('names.txt',encoding='utf-8') as file:
+        content:str = file.read()
+    names:list[str] = content.split()
     return names
 
 class Window(tk.Tk):
