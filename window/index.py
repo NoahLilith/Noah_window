@@ -9,4 +9,5 @@ def get_names() -> list[str]:
 if __name__ == '__main__':
     names:list[str] = get_names()
     window:tk.Tk = tk.Tk()
+    window.title("Python GUI")
     window.mainloop()
