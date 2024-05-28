@@ -11,6 +11,8 @@ class Window(tk.Tk):
         super().__init__()
         #多做一些事
         self.title("FIRST GUI")
+        self.geometry('500x300')
+        self.resizable(1,1)
         
 if __name__ == '__main__':
     names:list[str] = get_names()
