@@ -1,18 +1,29 @@
 ### tkinter layout grid
 import tkinter as tk
+from tkinter import ttk
 
-root = tk.Tk()
-root.title('oxxo.studio')
-root.geometry('200x200')
+class Window(tk.Tk):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.title("Grid")
+        self.geometry('300x300')
+        
+        ttk.Button(self, text = '(0,0)').grid(column=0,row=0)
+        
+        ttk.Label(self, text='A', background="#ff0").grid(column=0,row=1)
+        
+        ttk.Button(self, text = '(0,2)').grid(column=0,row=2)
+        
+        ttk.Label(self, text='B',background="#f0f").grid(column=0,row=3)
+        
+        ttk.Label(self, text='C',background="#0ff").grid(column=1,row=0)
+        
+        ttk.Button(self, text = '(2,0)').grid(column=2,row=0)
+        
+        ttk.Label(self, text='D',background="#0f0").grid(column=3,row=0)
+        
+        ttk.Button(self, text = '(1,1)').grid(column=1,row=1)
 
-a = tk.Label(root, text='AAA', background='#f90')
-b = tk.Label(root, text='BBB', background='#09c')
-c = tk.Label(root, text='CCC', background='#fc0')
-d = tk.Label(root, text='DDD', background='#0c9')
-
-a.grid(column=0, row=0)  # 放在 (0,0)
-b.grid(column=1, row=0)  # 放在 (1,0)
-c.grid(column=0, row=1)  # 放在 (0,1)
-d.grid(column=1, row=1)  # 放在 (1,1)
-
-root.mainloop()
+if __name__ == '__main__':
+    window:Window = Window()
+    window.mainloop()
